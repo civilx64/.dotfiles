@@ -1,5 +1,6 @@
 # ignore actual content of vim plugins
 /vim/.vim/bundle/
 /vim/.vim/ftplugin/
+/vim/.viminfo
 
 config/.config/fish/fishd.LAT-E5530
