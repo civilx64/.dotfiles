@@ -3,6 +3,7 @@
 
 * vim
 * git
+* tmux
 * fish
 * conda
 * (more to come ...)
