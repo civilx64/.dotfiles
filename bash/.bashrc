@@ -116,5 +116,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# added by Anaconda3 installer
-# export PATH="/home/scott/anaconda3/bin:$PATH"
+# Current recommended practice for conda integration
+. ~/anaconda3/etc/profile.d/conda.sh
