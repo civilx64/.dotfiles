@@ -31,8 +31,12 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'nvie/vim-flake8'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'lepture/vim-jinja'
+Plugin 'chrisbra/csv.vim'
+Plugin 'vim-scripts/LargeFile'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -190,4 +194,8 @@ let g:syntastic_loc_list_height=3
 " markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 
+" strip trailing whitespace on certain filetypes prior to save
+autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> %s/\s\+$//e
 
+" speed up editing for large files
+let g:LargeFile=20
