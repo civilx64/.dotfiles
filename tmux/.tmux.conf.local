@@ -158,7 +158,7 @@ tmux_conf_theme_right_separator_sub=''  #   PowerlineSymbols.otf font
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_status_left=' ❐ #S '
-tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} '
+tmux_conf_theme_status_right='#{prefix}#{pairing} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %l:%M %p , %b %d | #{username}#{root} | #{hostname} '
 
 # status left style
 tmux_conf_theme_status_left_fg='#000000,#e4e4e4,#e4e4e4'  # black, white , white
@@ -197,14 +197,14 @@ tmux_conf_battery_bar_symbol_empty='◻'
 # battery bar length (in number of symbols), possible values are:
 #   - auto
 #   - a number, e.g. 5
-tmux_conf_battery_bar_length='auto'
+tmux_conf_battery_bar_length='5'
 
 # battery bar palette, possible values are:
 #   - gradient (default)
 #   - heat
 #   - 'colour_full_fg,colour_empty_fg,colour_bg'
-#tmux_conf_battery_bar_palette='heat'
-tmux_conf_battery_bar_palette='#8a8a8a,#8a8a8a,#202020'   # light gray, light gray, dark gray
+tmux_conf_battery_bar_palette='gradient'
+#tmux_conf_battery_bar_palette='#8a8a8a,#8a8a8a,#202020'   # light gray, light gray, dark gray
 
 # battery hbar palette, possible values are:
 #   - gradient (default)
