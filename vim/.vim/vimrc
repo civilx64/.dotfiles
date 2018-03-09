@@ -37,6 +37,7 @@ Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'lepture/vim-jinja'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-scripts/LargeFile'
+Plugin 'dag/vim-fish'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
