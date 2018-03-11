@@ -3,4 +3,11 @@
 /vim/.vim/ftplugin/
 /vim/.viminfo
 
+# this file is dynamically overwritten by fish
 config/.config/fish/fishd.LAT-E5530
+
+# ignore saved tmux sessions
+/tmux/.tmux/resurrect/
+
+# ignore actual content of tmux plugins
+/tmux/.tmux/plugins/
