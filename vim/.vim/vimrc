@@ -38,6 +38,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-scripts/LargeFile'
 Plugin 'dag/vim-fish'
+"Plugin 'OmniSharp/omnisharp-vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
