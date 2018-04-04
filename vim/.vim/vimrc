@@ -38,7 +38,7 @@ Plugin 'lepture/vim-jinja'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-scripts/LargeFile'
 Plugin 'dag/vim-fish'
-"Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'OmniSharp/omnisharp-vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -56,7 +56,7 @@ filetype plugin indent on	" required for plugins to load correctly
 
 " Brief help
 " :PluginList		- lists configured plugins
-" :PluginInstall	- installs plugins; append `!` to update or 
+" :PluginInstall	- installs plugins; append `!` to update or
 "				just :PluginUpdate
 " :PluginSearch foo	- searches for foo; append `!` to refresh local cache
 " :PluginClean		- confirms removal of unused plugins; append `!` to
@@ -86,7 +86,7 @@ augroup numbertoggle
         autocmd!
         autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
         autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
-augroup end       
+augroup end
 
 " Show file stats
 set ruler
@@ -163,7 +163,7 @@ augroup XML
         autocmd FileType xml setlocal foldmethod=syntax
         autocmd FileType xml :syntax on
         autocmd FileType xml :%foldopen!
-augroup END       
+augroup END
 
 " use xmllint to indent XML files
 " use :gg=G in vim to prettify (indent) xml files
@@ -203,6 +203,8 @@ let g:airline_theme='wombat'
 " markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 
+" OmniSharp config
+let g:OmniSharp_server_path = '/usr/local/bin/omnisharp.http-linux-x64/omnisharp/OmniSharp.exe'
 " strip trailing whitespace on certain filetypes prior to save
 autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> %s/\s\+$//e
 
