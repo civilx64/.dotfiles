@@ -153,6 +153,9 @@ endif
 :autocmd InsertEnter * set cul
 :autocmd InsertLeave * set nocul
 
+" cursor styling
+:set guicursor=a:block-blinkwait175-blinkoff150-blinkon175
+
 " folding and indents for XML data
 " per
 " https://stackoverflow.com/questions/32154285/folding-expanding-and-colapsing-xml-tags-in-vim-xml-parsing
