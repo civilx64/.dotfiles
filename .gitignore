@@ -1,6 +1,5 @@
 # ignore actual content of vim plugins
 /vim/.vim/bundle/
-/vim/.vim/ftplugin/
 /vim/.viminfo
 
 # this file is dynamically overwritten by fish
