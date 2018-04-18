@@ -38,7 +38,8 @@ Plugin 'lepture/vim-jinja'
 Plugin 'chrisbra/csv.vim'
 Plugin 'vim-scripts/LargeFile'
 Plugin 'dag/vim-fish'
-" Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'OmniSharp/omnisharp-vim'
+Plugin 'tpope/vim-dispatch'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -53,6 +54,7 @@ Plugin 'vim-syntastic/syntastic'
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
 filetype plugin indent on	" required for plugins to load correctly
+filetype plugin on
 
 " Brief help
 " :PluginList		- lists configured plugins
@@ -208,6 +210,9 @@ let vim_markdown_preview_hotkey='<C-m>'
 
 " OmniSharp config
 let g:OmniSharp_server_path = '/usr/local/bin/omnisharp.http-linux-x64/omnisharp/OmniSharp.exe'
+let g:OmniSharp_server_use_mono = 1
+let g:OmniSharp_selector_ui = 'ctrlp'
+
 " strip trailing whitespace on certain filetypes prior to save
 autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> %s/\s\+$//e
 
