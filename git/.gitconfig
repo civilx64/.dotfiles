@@ -2,5 +2,5 @@
 	name = civilx64
 	email = 26513472+civilx64@users.noreply.github.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = /home/scott/.gitignore_global
