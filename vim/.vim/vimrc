@@ -70,8 +70,8 @@ filetype plugin on
 
 syntax on
 
-" TODO: pick a leader key
-" let mapleader = ","
+" pick a leader key
+let mapleader = "\\"
 
 " Security
 set modelines=0
@@ -174,8 +174,17 @@ augroup END
 " use :gg=G in vim to prettify (indent) xml files
 au FileType xml setlocal equalprg=xmllint\ --format\ -\ 2>/dev/null
 
-" ignore python bytecode files
+" Nerdtree settings
+" https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
 let NERDTreeIgnore=['\.pyc$', '\~$']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
+
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " flag unnecessary white space
 " won't work unless there is a highlight group named `BadWhiteSpace`
@@ -213,7 +222,8 @@ let vim_markdown_preview_hotkey='<C-m>'
 " 0. Install dotnet core for linux using instructions on Microsoft's web page
 " 1. Download omnisharp-roslyn (latest release from github)
 " 2. Compile libuv from source (github).
-" 3. After installing with 'make install', run `sudo ldconfig`
+"    Note - requires autoconf - `sudo apt-get install autoconf`.
+" 3. After installing with `sudo make install`, run `sudo ldconfig`
 let g:OmniSharp_server_path = '/usr/local/bin/omnisharp.http-linux-x64/omnisharp/OmniSharp.exe'
 let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_selector_ui = 'ctrlp'
