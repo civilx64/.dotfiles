@@ -40,6 +40,7 @@ Plugin 'vim-scripts/LargeFile'
 Plugin 'dag/vim-fish'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -179,8 +180,9 @@ au FileType xml setlocal equalprg=xmllint\ --format\ -\ 2>/dev/null
 let NERDTreeIgnore=['\.pyc$', '\~$']
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let NERDTreeQuitOnOpen = 1
+" let NERDTreeQuitOnOpen = 1
 let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMapActivateNode='<space>'
 
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 
