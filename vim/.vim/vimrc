@@ -209,6 +209,11 @@ let g:airline_theme='powerlineish'
 let vim_markdown_preview_hotkey='<C-m>'
 
 " OmniSharp config
+" OmniSharp install notes:
+" 0. Install dotnet core for linux using instructions on Microsoft's web page
+" 1. Download omnisharp-roslyn (latest release from github)
+" 2. Compile libuv from source (github).
+" 3. After installing with 'make install', run `sudo ldconfig`
 let g:OmniSharp_server_path = '/usr/local/bin/omnisharp.http-linux-x64/omnisharp/OmniSharp.exe'
 let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_selector_ui = 'ctrlp'
