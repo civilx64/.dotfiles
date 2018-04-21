@@ -186,7 +186,9 @@ let NERDTreeMapActivateNode='<space>'
 
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" open NERDTree when vim opens without a file
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " flag unnecessary white space
 " won't work unless there is a highlight group named `BadWhiteSpace`
