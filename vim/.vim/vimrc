@@ -41,6 +41,7 @@ Plugin 'dag/vim-fish'
 Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'OrangeT/vim-csharp'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
