@@ -1,0 +1,4 @@
+channels:
+  - DLR-SC
+  - conda-forge
+  - defaults

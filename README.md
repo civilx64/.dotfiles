@@ -1,7 +1,7 @@
 # .dotfiles
 ### Portable settings, now in version control
 
-* vim
+* vim / neovim
 * git
 * tmux
 * fish
