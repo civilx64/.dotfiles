@@ -1,3 +1,6 @@
+# vi mode
+fish_vi_key_bindings
+
 function condalist -d 'List conda environments.'
   for dir in (ls $HOME/miniconda3/envs)
     echo $dir
