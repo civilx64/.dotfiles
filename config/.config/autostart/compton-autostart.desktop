@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Compton compositor autostart
+Comment=Start Compton compositing graphics display
+Exec=/usr/bin/compton -c -r 16 -l -24 -t -12 -G -b
+OnlyShowIn=LXDE
