@@ -23,6 +23,7 @@ Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-scripts/xml.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
@@ -42,6 +43,7 @@ Plugin 'OmniSharp/omnisharp-vim'
 Plugin 'tpope/vim-dispatch'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'OrangeT/vim-csharp'
+Plugin 'ekalinin/Dockerfile.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -49,9 +51,6 @@ Plugin 'OrangeT/vim-csharp'
 " Plugin 'git://git.wincent.com/command-t.git
 " git repos on your local machine (e.g. when working on your own plugin)
 " Plugin 'file:///home/scott/path/to/plugin'
-
-" syntax checking and highlighting
-Plugin 'vim-syntastic/syntastic'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
