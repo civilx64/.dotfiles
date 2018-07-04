@@ -8,6 +8,13 @@ case $- in
       *) return;;
 esac
 
+# startup in tmux
+# https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-startup-tmux
+# accessed 2018-07-04
+if command -v tmux>/dev/null; then
+    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
