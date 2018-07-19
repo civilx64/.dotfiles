@@ -233,7 +233,7 @@ let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_selector_ui = 'ctrlp'
 
 " strip trailing whitespace on certain filetypes prior to save
-autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> %s/\s\+$//e
+autocmd FileType c,cpp,java,md,php,py autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " speed up editing for large files
 let g:LargeFile=20
