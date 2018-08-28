@@ -85,3 +85,6 @@ complete -c ca -xA -a "(condalist)"
 
 # Enable conda activate / deactivate functions
 source ~/anaconda3/etc/fish/conf.d/conda.fish
+
+# set path to browser
+set -xg BROWSER /mnt/c/Program Files/Mozilla Firefox/firefox.exe
