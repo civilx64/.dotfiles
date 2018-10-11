@@ -87,4 +87,7 @@ complete -c ca -xA -a "(condalist)"
 source ~/anaconda3/etc/fish/conf.d/conda.fish
 
 # set path to browser
-set -xg BROWSER /mnt/c/Program Files/Mozilla Firefox/firefox.exe
+set -xg BROWSER '/c/Program Files/Mozilla Firefox/firefox.exe'
+
+# set path to Docker on Windows
+set -xg DOCKER_HOST tcp://0.0.0.0:2375

@@ -126,4 +126,3 @@ fi
 # Current recommended practice for conda integration
 . ~/anaconda3/etc/profile.d/conda.sh
 
-export BROWSER='/mnt/c/Program Files/Mozilla Firefox/firefox.exe'

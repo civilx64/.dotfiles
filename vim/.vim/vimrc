@@ -17,28 +17,30 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin()/end().
 " plugin on GitHub repo
+Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-scripts/xml.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Valloric/YouCompleteMe'
+"Plugin 'ervandew/supertab'
+"Plugin 'SirVer/ultisnips'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'kien/ctrlp.vim'
+"Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
-Bundle 'Rykka/riv.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'nvie/vim-flake8'
+"Plugin 'vim-scripts/indentpython.vim'
+"Plugin 'nvie/vim-flake8'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'lepture/vim-jinja'
-Plugin 'vim-scripts/LargeFile'
-Plugin 'dag/vim-fish'
-Plugin 'tpope/vim-dispatch'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'ekalinin/Dockerfile.vim'
+"Plugin 'lepture/vim-jinja'
+"Plugin 'Rykka/riv.vim'
+"Plugin 'vim-scripts/LargeFile'
+"Plugin 'dag/vim-fish'
+"Plugin 'tmhedberg/SimpylFold'
+"Plugin 'vim-scripts/xml.vim'
+"Plugin 'ekalinin/Dockerfile.vim'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
@@ -221,3 +223,14 @@ autocmd FileType c,cpp,java,md,php,py autocmd BufWritePre <buffer> %s/\s\+$//e
 
 " speed up editing for large files
 let g:LargeFile=20
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnips 
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
