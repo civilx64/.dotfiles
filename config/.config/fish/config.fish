@@ -83,6 +83,9 @@ end
 complete -c condactivate -xA -a "(condalist)"
 complete -c ca -xA -a "(condalist)"
 
+# add conda to path
+set -xg PATH $HOME/anaconda3/bin $PATH
+
 # Enable conda activate / deactivate functions
 source ~/anaconda3/etc/fish/conf.d/conda.fish
 
