@@ -21,10 +21,14 @@ Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'zchee/deoplete-jedi'
+"Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 "Plugin 'SirVer/ultisnips'
-Plugin 'vim-syntastic/syntastic'
+"Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
+
 "Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
@@ -197,6 +201,15 @@ set shell=/bin/bash
 " point YouCompleteMe server to python path
 let g:ycm_server_python_interpreter = '/usr/bin/python3'
 
+" point neovim to its specific virualenv
+let g:python3_host_prog = "~/anaconda3/envs/neovim3/python"
+
+" use deoplete
+let g:deoplete#enable_at_startup = 1
+
+" completions.python
+let g:deoplete#sources#jedi#show_docstring = 1
+
 " add syntastic messages to status line
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -214,6 +227,9 @@ let g:airline_powerline_fonts = 1
 
 " set airline theme
 let g:airline_theme='powerlineish'
+
+" show ALE errors and warnings in statusline
+let g:airline#extensions#enabled = 1
 
 " markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
