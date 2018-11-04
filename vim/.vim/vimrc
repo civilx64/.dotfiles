@@ -19,6 +19,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'Shougo/deoplete.nvim'
@@ -32,6 +33,11 @@ Plugin 'w0rp/ale'
 "Plugin 'kien/ctrlp.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'jmcantrell/vim-virtualenv'
+
+"typescript support
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+
 "Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'nvie/vim-flake8'
 Plugin 'vim-airline/vim-airline'
@@ -45,13 +51,6 @@ Plugin 'dhruvasagar/vim-table-mode'
 "Plugin 'tmhedberg/SimpylFold'
 "Plugin 'vim-scripts/xml.vim'
 "Plugin 'ekalinin/Dockerfile.vim'
-
-" plugin from http://vim-scripts.org/vim/scripts.html
-" Plugin 'L9'
-" Git plugin not hosted on Github
-" Plugin 'git://git.wincent.com/command-t.git
-" git repos on your local machine (e.g. when working on your own plugin)
-" Plugin 'file:///home/scott/path/to/plugin'
 
 " All of your Plugins must be added before the following line
 call vundle#end()		" required
@@ -146,6 +145,7 @@ nnoremap <space> za
 
 " color schemes and themes
 colorscheme jellybeans
+
 "set background=light
 
 " 256 colors in terminal for tmux
@@ -153,9 +153,13 @@ if $TERM == 'screen'
 set t_Co=256
 endif
 
+
 " highlight current line when in insert mode
-:autocmd InsertEnter * set cul
-:autocmd InsertLeave * set nocul
+set cursorline
+highlight CursorLine ctermbg=235 ctermfg=None
+
+autocmd InsertEnter * highlight CursorLine ctermbg=237 ctermfg=None
+autocmd InsertLeave * highlight Cursorline ctermbg=235 ctermfg=None
 
 " cursor styling
 :set guicursor=a:block-blinkwait175-blinkoff150-blinkon175
@@ -175,6 +179,9 @@ augroup END
 " use xmllint to indent XML files
 " use :gg=G in vim to prettify (indent) xml files
 au FileType xml setlocal equalprg=xmllint\ --format\ -\ 2>/dev/null
+
+" force filetype for typscript
+au BufRead,BufNewFile *.ts setfiletype typescript
 
 " Nerdtree settings
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
