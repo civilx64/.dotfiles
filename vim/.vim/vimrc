@@ -38,6 +38,9 @@ Plugin 'jmcantrell/vim-virtualenv'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi'
 
+"toml syntax
+Plugin 'cespare/vim-toml'
+
 "Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'nvie/vim-flake8'
 Plugin 'vim-airline/vim-airline'
