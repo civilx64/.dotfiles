@@ -26,6 +26,10 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'zchee/deoplete-jedi'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
+
+"close buffer without affecting window layout
+Plugin 'qpkorr/vim-bufkill'
+
 "Plugin 'SirVer/ultisnips'
 "Plugin 'vim-syntastic/syntastic'
 Plugin 'w0rp/ale'
@@ -183,8 +187,12 @@ augroup END
 " use :gg=G in vim to prettify (indent) xml files
 au FileType xml setlocal equalprg=xmllint\ --format\ -\ 2>/dev/null
 
-" force filetype for typscript
+" force filetype for typescript
 au BufRead,BufNewFile *.ts setfiletype typescript
+
+" force filetype for InRoads preferences and road design
+au BufRead,BufNewFile *.xin setfiletype xml
+au BufRead,BufNewFile *.ird setfiletype xml
 
 " Nerdtree settings
 " https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9
@@ -259,4 +267,3 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
-
