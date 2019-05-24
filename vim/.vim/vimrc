@@ -91,7 +91,7 @@ set relativenumber
 
 " Switch relative and absolute numbers when changing focus or modes
 " https://jeffkreeftmeijer.com/vim-number/
-" accessed 2017-10-3
+" accessed 2017-10-03
 augroup numbertoggle
         autocmd!
         autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
@@ -169,7 +169,7 @@ autocmd InsertEnter * highlight CursorLine ctermbg=237 ctermfg=None
 autocmd InsertLeave * highlight Cursorline ctermbg=235 ctermfg=None
 
 " cursor styling
-:set guicursor=a:block-blinkwait175-blinkoff150-blinkon175
+" :set guicursor=a:block-blinkwait175-blinkoff150-blinkon175
 
 " folding and indents for XML data
 " per
@@ -267,3 +267,9 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger='<tab>'
 let g:UltiSnipsJumpForwardTrigger='<tab>'
 let g:UltiSnipsJumpBackwardTrigger='<s-tab>'
+
+" autoclose brackets, parentheses, etc.
+inoremap { {}<Esc>i
+inoremap ( ()<Esc>i
+inoremap [ []<Esc>i
+
