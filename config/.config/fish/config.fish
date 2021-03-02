@@ -86,11 +86,18 @@ complete -c ca -xA -a "(condalist)"
 # add conda to path
 set -xg PATH $HOME/anaconda3/bin $PATH
 
+# add yarn to path
+set -xg PATH $PATH $HOME/.yarn/bin 
+
 # Enable conda activate / deactivate functions
 source ~/anaconda3/etc/fish/conf.d/conda.fish
 
 # set path to browser
-set -xg BROWSER '/c/Program Files/Mozilla Firefox/firefox.exe'
+# set -xg BROWSER '/c/Program Files/Mozilla Firefox/firefox.exe'
 
 # set path to Docker on Windows
 set -xg DOCKER_HOST tcp://0.0.0.0:2375
+
+# add nvm to path
+set -xg NVM_DIR $HOME/.nvm
+
