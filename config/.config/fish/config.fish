@@ -32,6 +32,12 @@ function condactivate -d 'Activate a conda environment' -a cenv
   # put the condabin directory at the front of the PATH
   set -xg PATH $condabin $PATH
 
+  # path to virtual fish
+  set vfbin  $HOME/.local/bin
+
+  # add virtualfish to PATH
+  set -xg PATH $PATH $vfbin 
+
   # this is an undocumented environmental variable that influences
   # how conda behaves when you don't specify an environment for it.
   # https://github.com/conda/conda/issues/473
@@ -84,4 +90,4 @@ complete -c condactivate -xA -a "(condalist)"
 complete -c ca -xA -a "(condalist)"
 
 # Enable conda activate / deactivate functions
-source ~/anaconda3/etc/fish/conf.d/conda.fish
+# source ~/anaconda3/etc/fish/conf.d/conda.fish
