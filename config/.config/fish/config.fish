@@ -91,3 +91,6 @@ complete -c ca -xA -a "(condalist)"
 
 # Enable conda activate / deactivate functions
 # source ~/anaconda3/etc/fish/conf.d/conda.fish
+
+# load node version manager (nvm)
+# load_nvm
